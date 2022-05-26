@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
-import Services from "./components/Services/Services";
+import BasePage from "./components/Pages/BasePage/BasePage";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { Routes, Route } from "react-router-dom";
+import UserPanel from "./components/Pages/UserPanel/UserPanel";
 
 function App() {
   const [isopen, setisopen] = useState(false);
@@ -17,8 +17,16 @@ function App() {
       <Navbar toggle={toggle} />
       <Sidebar isopen={isopen} toggle={toggle} />
       <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/rebates" element={<BasePage />} />
+        <Route path="/collections" element={<BasePage />} />
+        <Route path="/bedrooms" element={<BasePage />} />
+        <Route path="/dining-rooms" element={<BasePage />} />
+        <Route path="/rooms" element={<BasePage />} />
+        <Route path="/complementary" element={<BasePage />} />
+        <Route path="/mattresses" element={<BasePage />} />
+        <Route path="/decoration" element={<BasePage />} />
+        <Route path="/blog" element={<BasePage />} />
+        <Route path="/user" element={<UserPanel />} />
       </Routes>
     </>
   );

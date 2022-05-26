@@ -1,6 +1,14 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root{
+    --main-color: #e80a42;
+    --secondary-color: #d2d0d0;
+    --third-color: #6A6B6CEA;
+}
+

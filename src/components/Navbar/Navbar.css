@@ -1,61 +1,131 @@
-nav {
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+header{
+  border-top: var(--secondary-color) solid 5px;
+  width: 100%;
   z-index: 100;
   position: fixed;
-  width: 100%;
-  background: black;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  background: white;
+}
+
+#pre-top {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  background-color: var(--main-color);
+}
+
+#slogan{
+  padding: 1rem;
+  text-align: center;
+  font-size: large;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.search-input {
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  width: 50rem;
+  text-align: center;
+  padding: 9px 9px;
+  background: #f6f6f6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 23px center;
+}
+
 .link {
   text-decoration: none;
   display: flex;
-  color: white;
+  color: var(--third-color);
   align-items: center;
   padding: 0 1rem;
-  height: 100%;
   cursor: pointer;
 }
+
 .mobile-menu-icon {
   display: none;
+  height: 40px;
+  width: 40px;
+  color: var(--main-color);
+  align-items: center;
+  cursor: pointer;
+  margin-left: 2rem;
 }
+
+.header-rows{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .icons {
   display: flex;
   align-items: center;
 }
-.icon-tabler {
-  margin-right: 5px;
+
+.icons-item{
+  margin-right: 2rem;
+  cursor: pointer;
+  color: var(--main-color);
 }
-.github-icon {
-  color: white;
-}
+
 .menu-items {
+  font-size: smaller;
+  padding-top: 1rem;
+  display: flex;
+}
+
+.header-columns{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-items,
+@media screen and (max-width: 1400px) {
   .signup-button,
-  .github-corner {
+  .mobile-menu-icon {
+    display: flex;
+  }
+  .icons-item:not(.persistence),
+  .menu-items{
     display: none;
   }
-  .mobile-menu-icon {
-    display: block;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 4vh;
-    cursor: pointer;
-    top: 0;
-    right: 0;
+  #slogan{
+    font-size: x-large;
+    margin-top: 0;
+  }
+  .header-columns{
+    flex-direction: column;
+  }
+  .search-input{
+    margin: 0 1rem 0 1rem;
+    width: 70vw;
+  }
+  .icons-item{
+    width: 30px;
+    height: 30px;
+  }
+  nav{
+    padding: 1rem 1rem;
   }
 }
 
-.github-corner {
-  position: fixed;
-  top: 0;
-  z-index: 99999;
-  right: 0px;
+.icon-btn{
+  position:relative;
+}
+
+.notify-badge{
+  position: absolute;
+  left:-20px;
+  bottom:10px;
+  background: rgba(106, 107, 108, 0.68);
+  text-align: center;
+  border-radius: 40px;
+  color:white;
+  padding:5px 8px;
+  font-size:small;
 }
