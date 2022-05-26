@@ -3,8 +3,8 @@
 
 ### Setup
 
-1. Fork this repository
-2. Clone this project locally using
-3. cd React-Responsive-Navbar
-4. npm install
-5. npm run start
+1. Clone this project locally using (Optional)
+> https://github.com/edwinsaavedra99/headerReact
+2. cd headerReact
+3. npm install
+4. npm run start
